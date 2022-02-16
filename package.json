@@ -1,5 +1,5 @@
 {
-  "name": "potential-enigma",
+  "name": "readme-generator",
   "version": "1.0.0",
   "description": "[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coding-boot-camp/potential-enigma.git"
+    "url": "git+https://github.com/asiajcrew/readme-generator.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/coding-boot-camp/potential-enigma/issues"
+    "url": "https://github.com/asiajcrew/readme-generator/issues"
   },
-  "homepage": "https://github.com/coding-boot-camp/potential-enigma#readme",
+  "homepage": "https://github.com/asiajcrew/readme-generator#readme",
   "dependencies": {
     "inquirer": "^8.2.0"
   }
