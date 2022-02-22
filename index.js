@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown= require('./generateMarkdown');
 
 // TODO: Create a function to initialize app
 const questions = () => {
@@ -34,21 +35,21 @@ const questions = () => {
         },
         {
             type: 'input',
-            name: 'installation-instructions',
+            name: 'installation',
             message: 'Please provide installation instructions for your project',
             default: 'node'
         },
         {
             type: 'input',
-            name: 'usage-info',
+            name: 'usage',
             message: 'Please provide usage information for your project',
             default: 'npm inquirer'
         },
         {
-            type: 'checkbox',
-            name: 'licenses',
+            type: 'list',
+            name: 'license',
             message: 'What licenses were used to create your project?',
-            choices: ['MIT', 'GPLV3', 'Mozilla Public License 2.0']
+            choices: ['none', 'MIT', 'GPLV3', 'Mozilla Public License 2.0']
         },
         {
             type: 'input',
@@ -80,7 +81,7 @@ const questions = () => {
 // Function call to initialize app
 questions()
 .then(portfolioData => {
-    return generateReadMe(portfolioData);
+    return generateMarkdown(portfolioData);
 })
 .then(ReadMe => {
     return writeFile(ReadMe);
@@ -103,9 +104,4 @@ const writeFile = fileContent => {
             });
         });
     });
-};
-
-
-const generateReadMe= userResponse => {
-    return `${userResponse}`
 };
